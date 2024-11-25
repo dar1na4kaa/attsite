@@ -1,16 +1,85 @@
-html,body{
+:root {
+    --bg-color: #2F2FA2;
+    --text-color: #f5f5f5;
+    --accent-color: #f64c72;
+    --contrast-color: #242582;
+}
+
+html,
+body {
     height: 100%;
 }
-body{
+
+body {
     min-width: 320px;
     font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
-.wrapper{
+
+a {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*#################################################### General Rules ################################ ##### */
+.wrapper {
     min-height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-main.main{
+main.main {
     flex: 1 1 auto;
+}
+
+/*#################################################### Header Rules ##################################### */
+ul.social-icons {
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+
+}
+
+ul.social-icons li {
+    margin-right: 10px;
+}
+
+ul.social-icons a {
+    background-color: var(--contrast-color);
+    color: var(--text-color);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    float: left;
+    text-align: center;
+    transition: all .3s;
+}
+
+ul.social-icons a:hover {
+    background-color: var(--contrast-color);
+    color: var(--accent-color);
+}
+
+.header-top-phone a {
+    text-decoration: none;
+}
+
+.header-top-phone a:hover {
+    text-decoration: underline;
+}
+/*#################################################### Main Rules ##################################### */
+.authorization-card{
+    max-width: 400px;
+    width: 100%;
 }
