@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-document.getElementById('confirmDeleteBtn').addEventListener('click', function() {
+document.getElementById('confirmDeleteBtn').addEventListener('click', function () {
     alert('Пользователь удалён!');
     window.location.href = 'list_users.html'; // Перенаправление на список пользователей
 });
@@ -95,3 +95,101 @@ document.getElementById('addPostForm').addEventListener('submit', function (e) {
         alert('Пожалуйста, заполните все поля.');
     }
 });
+
+// Функция для отображения кнопок выбора недели
+function showWeeks(semester) {
+    // Скрыть все блоки с неделями
+    const allWeeks = document.querySelectorAll('.semester-weeks');
+    allWeeks.forEach(week => {
+        week.style.display = 'none';
+    });
+
+    // Скрыть блок с расписанием, но показать блок с консультациями при выборе семестра
+    var scheduleContainer = document.getElementById("schedule-container");
+    if (scheduleContainer.style.display === "block") {
+        scheduleContainer.style.display = "none";
+    }
+
+    // Показать выбранный семестр
+    const selectedSemester = document.getElementById(semester);
+    if (selectedSemester) {
+        selectedSemester.style.display = 'block';
+    }
+
+    // Скрыть все расписания
+    const allSchedules = document.querySelectorAll('.schedule-day');
+    allSchedules.forEach(schedule => {
+        schedule.style.display = 'none';
+    });
+
+    // Показать консультации для выбранного семестра
+    showConsultation(true); // Открыть консультации при выборе семестра
+}
+
+// Функция для отображения расписания для дня недели и блоков консультаций
+function toggleScheduleVisibility(day) {
+    var scheduleContainer = document.getElementById("schedule-container");
+
+    // Если блок с расписанием скрыт, показать его
+    if (scheduleContainer.style.display === "none") {
+        scheduleContainer.style.display = "block";
+    }
+
+    showSchedule(day);  // Показать расписание для выбранного дня
+
+    // Скрыть консультации, когда день выбран
+    showConsultation(false); // Закрыть консультации после выбора дня
+}
+
+// Функция для отображения расписания для дня недели
+function showSchedule(day) {
+    // Скрыть все расписания
+    const allSchedules = document.querySelectorAll('.schedule-day');
+    allSchedules.forEach(schedule => {
+        schedule.style.display = 'none';
+    });
+
+    // Показать расписание для выбранного дня
+    const selectedDay = document.getElementById(day);
+    if (selectedDay) {
+        selectedDay.style.display = 'block';
+    }
+}
+
+// Функция для отображения консультаций
+function showConsultation(isVisible) {
+    const consultations = document.getElementById('consultations-container');
+    if (consultations) {
+        if (isVisible) {
+            consultations.style.display = 'block';  // Показать блок с консультациями
+        } else {
+            consultations.style.display = 'none';  // Скрыть блок с консультациями
+        }
+    }
+}
+
+const currentMonth = new Date().getMonth();
+const months = [
+    'январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'
+];
+
+// Функция для ограничения выбора месяца
+function limitMonthSelection() {
+    const monthSelect = document.getElementById("month");
+    const options = monthSelect.options;
+
+    // Отключаем все месяцы после июня (начало учебного года - сентябрь)
+    // Июль и август также исключаем (каникулы)
+    for (let i = 0; i < options.length; i++) {
+        if (i < 8 || i > currentMonth) { // Июль и август — каникулы, и после текущего месяца
+            options[i].disabled = true;
+        } else {
+            options[i].disabled = false;
+        }
+    }
+}
+
+// Запускаем функцию при загрузке страницы
+window.onload = function () {
+    limitMonthSelection();
+};

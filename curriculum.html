@@ -16,13 +16,27 @@
 <body>
 
     <div class="wrapper">
-        <!-- Header -->
         <header class="header">
             <div class="header-top py-3">
                 <div class="container-fluid">
                     <div class="row justify-content-between align-items-center">
                         <div class="header-page col-auto">
-                            <div><a href="list_users.html">Пользователи</a></div>
+                            <div><a href="student_dashboard.html">Главная</a></div>
+                        </div>
+                        <div class="header-page col-auto">
+                            <div><a href="shedule.html">Расписание</a></div>
+                        </div>
+                        <div class="header-page col-auto">
+                            <div><a href="view_grade.html">Успеваемость</a></div>
+                        </div>
+                        <div class="header-page col-auto">
+                            <div><a href="curriculum.html">Учебный план</a></div>
+                        </div>
+                        <div class="header-page col-auto">
+                            <div><a href="certificate.html">Справки</a></div>
+                        </div>
+                        <div class="header-page col-auto">
+                            <div><a href="view_news.html">Объявления</a></div>
                         </div>
                         <div class="col-auto">
                             <div class="header-acoount d-flex align-items-center">
@@ -34,34 +48,18 @@
             </div>
         </header>
 
+        <!-- Main Content -->
         <main class="main">
             <div class="container">
-                <h2 class="mb-4">Информация о пользователе</h2>
-
-                <!-- Информация о пользователе -->
-                <div class="user-details">
-                    <div class="user-info">
-                        <img src="/assets/img/user.jpg" alt="Фото пользователя">
-                        <div>
-                            <p><strong>ФИО:</strong> Иван Иванов</p>
-                            <p><strong>Роль:</strong> Преподаватель</p>
-                            <p><strong>Отделение:</strong> Транспортные технологии</p>
-                            <p><strong>Электронная почта:</strong> ivan.ivanov@academia.com</p>
-                            <p><strong>Номер телефона:</strong> +7 (123) 456-78-90</p>
-                            <p><strong>Адрес:</strong> Москва, ул. Примерная, 1</p>
-                        </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Учебный план на год</h3>
+                        <p class="card-text">Здесь вы можете просмотреть и скачать учебный план на текущий год в формате PDF.</p>
+                        <a href="/assets/pdf/study_plan_2024.pdf" class="btn-primary" download>Скачать учебный план (PDF)</a>
                     </div>
-                </div>
-
-                <!-- Кнопки для редактирования и удаления -->
-                <div class="action-buttons">
-                    <button class="btn btn-warning" href="list_users.html">Назад</button>
-                    <button class="btn btn-warning" href="edit_dashboard.html">Изменить</button>
-                    <button class="btn btn-danger" href="delete_user.html">Удалить</button>
                 </div>
             </div>
         </main>
-
 
         <!-- Footer -->
         <footer class="footer">
@@ -72,7 +70,6 @@
             </div>
         </footer>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/assets/js/main.js"></script>
 </body>

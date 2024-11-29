@@ -55,6 +55,20 @@ body {
     color: var(--text-color);
 }
 
+/* Footer */
+.footer-bottom {
+    background-color: var(--contrast-color);
+    color: var(--text-color);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.footer-bottom p {
+    margin-bottom: 0;
+}
+
 /* Основной контент */
 .main {
     display: flex;
@@ -69,8 +83,21 @@ body {
     max-width: 900px;
     text-align: center;
 }
-
-/* Стиль для карточки */
+/* Кнопки*/
+.btn-primary {
+    background-color: var(--accent-color);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: var(--contrast-color);
+}
+/* Карточка*/
 .card {
     background: #fff;
     border-radius: 8px;
@@ -79,7 +106,6 @@ body {
     animation: fadeIn 1s ease-out;
     width: 100%;
 }
-
 .card-body {
     padding: 30px;
 }
@@ -96,7 +122,55 @@ body {
     margin-bottom: 20px;
 }
 
-/* Стиль для карточки одного пользователя */
+/* Фильтры */
+.filters {
+    padding: 20px 0;
+}
+
+.filters .form-label {
+    font-size: 14px;
+}
+
+.filters .row {
+    margin-bottom: 20px;
+}
+
+.filters .col-md-3 {
+    display: flex;
+    flex-direction: column;
+}
+.filters select,
+.filters input {
+    margin-top: 5px;
+}
+select {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none; 
+    transition: border-color 0.3s ease;
+}
+
+select:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+select option {
+    padding: 10px;
+    background-color: #fff;
+    color: var(--text-color);
+}
+
+select option:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+/*CARD Пользователей */
 .user-details {
     background-color: #fff;
     padding: 30px;
@@ -105,7 +179,6 @@ body {
     margin-bottom: 30px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .user-details:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
@@ -141,7 +214,6 @@ body {
     font-size: 16px;
     margin: 8px 0;
 }
-
 /* Кнопки редактирования и удаления */
 .action-buttons {
     display: flex;
@@ -150,7 +222,6 @@ body {
     margin-top: 30px;
     animation: fadeInFromBottom 1s ease-out;
 }
-
 .action-buttons a,
 .action-buttons button {
     padding: 10px 20px;
@@ -160,7 +231,6 @@ body {
     color: #fff;
     transition: background-color 0.3s ease;
 }
-
 .action-buttons a {
     background-color: var(--accent-color);
 }
@@ -169,14 +239,11 @@ body {
 .action-buttons button:hover {
     background-color: var(--contrast-color);
 }
-
-
 .user-details p {
     color: #555;
     font-size: 16px;
     margin: 8px 0;
 }
-
 /* Список пользователей */
 .users-list {
     display: flex;
@@ -184,7 +251,6 @@ body {
     gap: 20px;
     justify-content: center;
 }
-
 .user-card {
     background: var(--contrast-color);
     color: var(--text-color);
@@ -194,12 +260,10 @@ body {
     text-align: justify;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
-
 .user-card:hover {
     transform: translateY(-5px);
     background-color: var(--accent-color);
 }
-
 .user-card img {
     width: 80px;
     height: 80px;
@@ -207,7 +271,6 @@ body {
     object-fit: cover;
     margin-bottom: 10px;
 }
-
 .user-card h5 {
     margin-top: 10px;
     font-size: 1.2rem;
@@ -216,7 +279,6 @@ body {
 .user-card p {
     font-size: 0.9rem;
 }
-
 .btn-primary,
 .form-container button {
     background-color: var(--accent-color);
@@ -228,31 +290,9 @@ body {
 .form-container button:hover {
     background-color: var(--contrast-color);
 }
+/*КОНЕЦ CARD ПОЛЬЗОВАТЕЛЕЙ*/
 
-/* Фильтры */
-.filters {
-    padding: 20px 0;
-}
-
-.filters .form-label {
-    font-size: 14px;
-}
-
-.filters .row {
-    margin-bottom: 20px;
-}
-
-.filters .col-md-3 {
-    display: flex;
-    flex-direction: column;
-}
-
-.filters select,
-.filters input {
-    margin-top: 5px;
-}
-
-/* Стиль для формы */
+/*FORM*/
 .form-container {
     background-color: #fff;
     padding: 30px;
@@ -261,13 +301,11 @@ body {
     margin-bottom: 30px;
     animation: fadeInFromLeft 1s ease-out;
 }
-
 .form-container h4 {
     color: #333;
     font-size: 24px;
     margin-bottom: 20px;
 }
-
 .form-container input {
     width: 100%;
     padding: 15px;
@@ -275,11 +313,9 @@ body {
     border-radius: 5px;
     border: 1px solid #ccc;
 }
-
 .form-container input:focus {
     border-color: var(--accent-color);
 }
-
 .form-container button {
     padding: 10px 20px;
     border-radius: 5px;
@@ -288,16 +324,16 @@ body {
     color: #fff;
     transition: background-color 0.3s ease;
 }
-
 .form-container button:hover {
     background-color: var(--contrast-color);
 }
-
 .form-container label {
     color: var(--accent-color);
 
 }
-
+.form-control {
+    margin-bottom: 15px;
+}
 .action-buttons {
     display: flex;
     justify-content: center;
@@ -305,7 +341,6 @@ body {
     margin-top: 30px;
     animation: fadeInFromBottom 1s ease-out;
 }
-
 .action-buttons a,
 .action-buttons button {
     padding: 10px 20px;
@@ -315,23 +350,16 @@ body {
     color: #fff;
     transition: background-color 0.3s ease;
 }
-
 .action-buttons a {
     background-color: var(--accent-color);
 }
-
 .action-buttons a:hover,
 .action-buttons button:hover {
     background-color: var(--contrast-color);
 }
+/*КОНЕЦ FORM*/
 
-.row-cols-md-4 {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-/* Стиль для карточки-удаления */
+/*CARD УДАЛЕНИЯ*/
 .delete-card {
     background: #fff;
     border-radius: 8px;
@@ -344,19 +372,16 @@ body {
 .delete-card-body {
     padding: 30px;
 }
-
 .delete-card-title {
     font-size: 2rem;
     color: var(--contrast-color);
     margin-bottom: 20px;
 }
-
 .delete-card-text {
     font-size: 1.1rem;
     color: var(--accent-color);
     margin-bottom: 20px;
 }
-
 /* Кнопка удаления */
 .delete-btn-container {
     margin-top: 30px;
@@ -372,23 +397,10 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+/*КОНЕЦ CARD УДАЛЕНИЯ*/
 
-
-/* Footer */
-.footer-bottom {
-    background-color: var(--contrast-color);
-    color: var(--text-color);
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding: 10px 0;
-}
-
-.footer-bottom p {
-    margin-bottom: 0;
-}
-
-/* Форма добавления записи */
+/*НОВОСТИ*/
+/* Форма добавления новостей */
 .add-post-form {
     background: #fff;
     border-radius: 8px;
@@ -396,32 +408,11 @@ body {
     padding: 30px;
     margin-bottom: 30px;
 }
-
 .add-post-form h3 {
     color: var(--contrast-color);
     margin-bottom: 20px;
 }
-
-.form-control {
-    margin-bottom: 15px;
-}
-
-.btn-primary {
-    background-color: var(--accent-color);
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1.1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-    background-color: var(--contrast-color);
-}
-
-/* Список записей */
+/* Список новостей */
 .posts-list .post-item {
     background: #fff;
     border-radius: 8px;
@@ -429,7 +420,6 @@ body {
     padding: 20px;
     margin-bottom: 15px;
 }
-
 .posts-list .post-item h5 {
     color: var(--contrast-color);
 }
@@ -437,77 +427,129 @@ body {
 .posts-list .post-item p {
     color: var(--accent-color);
 }
+/*КОНЕЦ НОВОСТИ*/
 
-/* Стиль для расписания */
-.schedule-card {
-    background: #fff;
+/* РАСПИСАНИЕ */
+.schedule-container,.consultations-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    width: 100%;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInFromBottom 1s forwards;
+}
+.schedule-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     animation: fadeIn 1s ease-out;
 }
-
 .schedule-card-body {
-    padding: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInFromBottom 1s forwards;
 }
-
 .schedule-card-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--accent-color);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+.schedule-card-title:hover {
+    color: var(--contrast-color);
 }
 .schedule-card-text {
-    font-size: 1.1rem;
-    color: var(--accent-color);
+    font-size: 1rem;
+    color: var(--contrast-color);
+    margin-bottom: 10px;
+}
+/* Кнопки выбора семестра и консультаций */
+.semester-select, .consultations-select {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.semester-btn, .consultation-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: var(--accent-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
     margin-bottom: 20px;
 }
-/* Кнопки для выбора полугодия */
-
-.semester-select {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
-    animation: fadeInFromLeft 1s ease-out;
-}
-
-.semester-btn {
-    padding: 10px 20px;
-    font-size: 1.1rem;
-    border-radius: 5px;
-    color: white;
-    background-color: var(--accent-color);
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-}
-
-.semester-btn:hover {
+.semester-btn:hover, .consultation-btn:hover {
     background-color: var(--contrast-color);
+    transform: scale(1.05);
+}
+.semester-btn:focus, .consultation-btn:focus {
+    outline: none;
+}
+/* День расписания */
+.schedule-day h4 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
 }
 
-.consultations-select {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
-    animation: fadeInFromRight 1s ease-out;
+.schedule-day h4:hover {
+    color: var(--contrast-color);
 }
 
-.consultation-btn {
-    padding: 10px 20px;
+.schedule-day ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.schedule-day li {
+    margin-bottom: 10px;
     font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.schedule-day li:hover {
+    color: var(--accent-color);
+}
+
+/* Лист консультаций*/
+.consultations-container {
+    display: block;
+}
+.consultations-list {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.consultations-list h5 {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+.consultations-list p {
+    margin-bottom: 8px;
+    font-style: italic;
+}
+/* КОНЕЦ РАСПИСАНИЯ*/
+
+.hidden-note,.hidden-not-education {
+    /*    display: none;*/
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8d7da;
+    color: #721c24;
     border-radius: 5px;
-    color: white;
-    background-color: var(--accent-color);
-    transition: background-color 0.3s ease;
-    cursor: pointer;
+    border: 1px solid #f5c6cb;
 }
-
-.consultation-btn:hover {
-    background-color: var(--contrast-color);
-}
-
 /* Анимации */
 @keyframes fadeIn {
     0% {
@@ -542,11 +584,24 @@ body {
         transform: translateY(0);
     }
 }
-
-
 /* Мобильные стили */
 @media (max-width: 767px) {
+    .header a {
+        margin: 0 5px;
+        font-size: 0.9rem;
+    }
+    .header .nav-links {
+        flex-direction: row;
+        gap: 30px;
+    }
 
+    .semester-btn {
+        width: auto;
+    }
+
+    .schedule-container {
+        margin-top: 20px;
+    }
     .filters input,
     .filters select {
         max-width: 100%;
@@ -556,10 +611,24 @@ body {
         width: 100%;
         margin-top: 5px;
     }
-}
+    .table th,
+    .table td {
+        padding: 10px;
+    }
+    .card-body {
+        padding: 15px;
+    }
 
-@media (min-width: 768px) {
-    .user-card .btn {
-        width: auto;
+    .form-container h4 {
+        font-size: 1rem;
+    }
+
+    .filters select,
+    .filters button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+    .schedule-card-body {
+        padding: 15px;
     }
 }
