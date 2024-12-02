@@ -98,6 +98,29 @@ body {
 .btn-primary:hover {
     background-color: var(--contrast-color);
 }
+.btn-info {
+    background-color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-warning {
+    background-color:var(--accent-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger {
+    background-color: #f44336;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 /* Карточка*/
 .card {
     background: #fff;
@@ -568,6 +591,49 @@ select option:hover {
     border-radius: 5px;
     border: 1px solid #f5c6cb;
 }
+/* Анимации */
+.animated-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    animation: fadeInText 1.5s ease-out forwards;
+    opacity: 0;
+}
+@keyframes fadeInText {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Карточки групп */
+.group-cards .group-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.group-cards .group-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Зум эффект при наведении */
+.hover-zoom {
+    overflow: hidden;
+    position: relative;
+}
+.hover-zoom img {
+    transition: transform 0.3s ease;
+}
+.hover-zoom:hover img {
+    transform: scale(1.1);
+}
+
 /* Анимации */
 @keyframes fadeIn {
     0% {
