@@ -382,7 +382,8 @@ select option:hover {
     border-radius: 5px;
     font-size: 1rem;
     text-decoration: none;
-    color: #fff;
+    color: var(--text-color);
+    background-color: var(--shadow-text-color);
     transition: background-color 0.3s ease;
 }
 .action-buttons a {
@@ -390,7 +391,7 @@ select option:hover {
 }
 .action-buttons a:hover,
 .action-buttons button:hover {
-    background-color: var(--contrast-color);
+    background-color: var(--accent-color);
 }
 /*КОНЕЦ FORM*/
 
@@ -591,6 +592,46 @@ select option:hover {
     border-radius: 5px;
     border: 1px solid #f5c6cb;
 }
+.group-info, .students-list {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color:var(--shadow-text-color);
+}
+
+.group-info p, .student-info p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.students-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.students-list th, .students-list td {
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.students-list th {
+    background-color: #f4f4f4;
+}
+
+.student-info {
+    background-color: #f2f9ff;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.student-info h3 {
+    margin-top: 0;
+}
+
 /* Анимации */
 .animated-title {
     font-size: 2.5rem;
@@ -609,31 +650,6 @@ select option:hover {
         opacity: 1;
     }
 }
-
-/* Карточки групп */
-.group-cards .group-card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.group-cards .group-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Зум эффект при наведении */
-.hover-zoom {
-    overflow: hidden;
-    position: relative;
-}
-.hover-zoom img {
-    transition: transform 0.3s ease;
-}
-.hover-zoom:hover img {
-    transform: scale(1.1);
-}
-
 /* Анимации */
 @keyframes fadeIn {
     0% {
