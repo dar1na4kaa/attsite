@@ -9,7 +9,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-    <link rel="stylesheet" href="/assets/css/user.css"> <!-- Подключаем внешний файл стилей -->
+    <link rel="stylesheet" href="/assets/css/user-style/user.css">
     <link rel="shortcut icon" href="/assets/img/favicon.ico">
 </head>
 
@@ -22,11 +22,14 @@
                 <div class="container-fluid">
                     <div class="row justify-content-between align-items-center">
                         <div class="header-page col-auto">
-                            <div><a href="">Пользователи</a></div>
+                            <div><a href="/assets/pages/admin/view-list-user.html">Пользователи</a></div>
+                        </div>
+                        <div class="header-page col-auto">
+                            <div><a href="/assets/pages/news/news.html">Объявления</a></div>
                         </div>
                         <div class="col-auto">
                             <div class="header-acoount d-flex align-items-center">
-                                <a href="">Личный кабинет</a>
+                                <a href="/assets/pages/account/account.html">Личный кабинет</a>
                             </div>
                         </div>
                     </div>
@@ -34,7 +37,6 @@
             </div>
         </header>
 
-        <!-- Main Content -->
         <main class="main">
             <div class="container">
                 <h2 class="mb-4">Информация о пользователе</h2>
@@ -60,12 +62,11 @@
     
                 <!-- Кнопки для редактирования и удаления -->
                 <div class="d-flex">
-                    <a href="edit_dashboard.html" class="btn btn-warning me-3">Редактировать</a>
+                    <a href="#" class="btn btn-warning me-3">Редактировать</a>
                     <button class="btn btn-danger" onclick="deleteUser()">Удалить</button>
                 </div>
             </div>
         </main>
-
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-bottom py-2">
