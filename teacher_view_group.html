@@ -20,12 +20,26 @@
             <div class="header-top py-3">
                 <div class="container-fluid">
                     <div class="row justify-content-between align-items-center">
-                        <div class="col-auto"><a href="organizer_dashboard.html">Главная</a></div>
-                        <div class="col-auto"><a href="groups.html">Группы</a></div>
-                        <div class="col-auto"><a href="reports.html">Отчетность</a></div>
-                        <div class="col-auto"><a href="certificates.html">Справки</a></div>
-                        <div class="col-auto"><a href="announcements.html">Объявления</a></div>
-                        <div class="col-auto"><a href="dashboard.html">Личный кабинет</a></div>
+                        <div class="header-page col-auto">
+                            <div><a href="teacher_dashboard.html">Главная</a></div>
+                        </div>
+                        <div class="header-page col-auto">
+                            <div><a href="teacher_shedule.html">Расписание</a></div>
+                        </div>
+                        <div class="header-page col-auto">
+                            <div><a href="teacher_groups.html">Группы</a></div>
+                        </div>
+                        <div class="header-page col-auto">
+                            <div><a href="teacher_reports.html">Отчетность</a></div>
+                        </div>
+                        <div class="header-page col-auto">
+                            <div><a href="view_news.html">Объявления</a></div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="header-acoount d-flex align-items-center">
+                                <a href="dashboard.html">Личный кабинет</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -43,7 +57,7 @@
                                 <h2>Группа: ДИ-25</h2>
                                 <p><strong>Специальность:</strong> Информационные технологии</p>
                                 <p><strong>Курс:</strong> 1</p>
-                                <p><strong>Преподаватель:</strong> Иванова Марина Владимировна</p>
+                                <p><strong>Куратор:</strong> Иванова Марина Владимировна</p>
                                 <p><strong>Группа номер:</strong> 101</p>
                             </div>
 
@@ -71,7 +85,7 @@
                                             <td class="action-buttons">
                                                 <form action="" method="POST">
                                                     <input type="hidden" name="student_id" value="1">
-                                                    <a href="view_student.html" class="btn btn-primary">Посмотреть</a>
+                                                    <a href="teacher_view_student.html" class="btn btn-primary">Посмотреть</a>
                                                 </form>
                                             </td>
                                         </tr>
@@ -84,7 +98,7 @@
                                             <td class="action-buttons">
                                                 <form action="view_student.html" method="POST">
                                                     <input type="hidden" name="student_id" value="2">
-                                                    <a href="view_student.html" class="btn btn-primary">Посмотреть</a>
+                                                    <a href="teacher_view_student.html" class="btn btn-primary">Посмотреть</a>
                                                 </form>
                                             </td>
                                         </tr>
@@ -97,7 +111,7 @@
                                             <td class="action-buttons">
                                                 <form action="view_student.html" method="POST">
                                                     <input type="hidden" name="student_id" value="3">
-                                                    <a href="view_student.html" class="btn btn-primary">Посмотреть</a>
+                                                    <a href="teacher_view_student.html" class="btn btn-primary">Посмотреть</a>
                                                 </form>
                                             </td>
                                         </tr>

@@ -4,18 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Педагог-организатор - Академия Транспортных Технологий</title>
+    <title>Расписание - Академия Транспортных Технологий</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/user.css">
-    <link rel="shortcut icon" href="/assets/img/favicon.ico">
 </head>
 
 <body>
     <div class="wrapper">
-        <!-- Header -->
         <header class="header">
             <div class="header-top py-3">
                 <div class="container-fluid">
@@ -33,7 +31,7 @@
                             <div><a href="kurator_certificates.html">Справки</a></div>
                         </div>
                         <div class="header-page col-auto">
-                            <div><a href="news.html">Объявления</a></div>
+                            <div><a href="view_news.html">Объявления</a></div>
                         </div>
                         <div class="col-auto">
                             <div class="header-acoount d-flex align-items-center">
@@ -45,22 +43,40 @@
             </div>
         </header>
 
-        <!-- Main Content -->
+        <!-- Основной контент -->
         <main class="main">
             <div class="container">
-                <div id="content">
-                    <h3>Добро пожаловать, педагог-организатор!</h3>
-                    <p>Выберите один из разделов в меню, чтобы приступить к работе.</p>
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Ведомости групп</h4>
+                        <!-- Report Cards -->
+                        <div class="schedule-container">
+                            <div class="schedule-cards">
+                                <div class="schedule-card-body">
+                                    <h4 class="schedule-card-title">Ведомость оценок группы ДИ-25 на 1.11.2024 </h4>
+                                    <p class="schedule-card-text">Просмотрите ведомость оценок ваших учащихся за январь
+                                        2024
+                                        года.</p>
+                                    <button class="btn btn-primary">Посмотреть</button>
+                                </div>
+                                <div class="schedule-card-body">
+                                    <h4 class="schedule-card-title">Ведомость посещаемости группы ДИ-25 на 1.11.2024 </h4>
+                                    <p class="schedule-card-text">Просмотрите ведомость оценок ваших учащихся за январь
+                                        2024
+                                        года.</p>
+                                    <button class="btn btn-primary">Посмотреть</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
 
         <!-- Footer -->
         <footer class="footer">
-            <div class="footer-bottom py-2">
-                <div class="container-fluid text-center">
-                    <p class="mb-0">&copy; 2024 Академия Транспортных Технологий</p>
-                </div>
+            <div class="footer-bottom py-2 text-center">
+                <p class="mb-0">&copy; 2024 Академия Транспортных технологий</p>
             </div>
         </footer>
     </div>

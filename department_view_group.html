@@ -73,6 +73,11 @@
                                                     <input type="hidden" name="student_id" value="1">
                                                     <a href="view_student.html" class="btn btn-primary">Посмотреть</a>
                                                 </form>
+                                                <form action="delete_student.php" method="POST"
+                                                    onsubmit="return confirm('Вы уверены, что хотите удалить этого студента?')">
+                                                    <input type="hidden" name="student_id" value="1">
+                                                    <button type="submit" class="btn">Удалить</button>
+                                                </form>
                                             </td>
                                         </tr>
                                         <tr>
@@ -86,6 +91,11 @@
                                                     <input type="hidden" name="student_id" value="2">
                                                     <a href="view_student.html" class="btn btn-primary">Посмотреть</a>
                                                 </form>
+                                                <form action="delete_student.php" method="POST"
+                                                    onsubmit="return confirm('Вы уверены, что хотите удалить этого студента?')">
+                                                    <input type="hidden" name="student_id" value="2">
+                                                    <button type="submit" class="btn">Удалить</button>
+                                                </form>
                                             </td>
                                         </tr>
                                         <tr>
@@ -98,6 +108,11 @@
                                                 <form action="view_student.html" method="POST">
                                                     <input type="hidden" name="student_id" value="3">
                                                     <a href="view_student.html" class="btn btn-primary">Посмотреть</a>
+                                                </form>
+                                                <form action="delete_student.php" method="POST"
+                                                    onsubmit="return confirm('Вы уверены, что хотите удалить этого студента?')">
+                                                    <input type="hidden" name="student_id" value="3">
+                                                    <button type="submit" class="btn">Удалить</button>
                                                 </form>
                                             </td>
                                         </tr>

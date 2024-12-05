@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание - Академия Транспортных Технологий</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/user.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-top py-3">
+                <div class="container-fluid">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="header-page col-auto">
+                            <div><a href="kurator_dashboard.html">Главная</a></div>
+                        </div>
+                        <div class="header-page col-auto">
+                            <div><a href="groups.html">Группы</a></div>
+                        </div>
+                        <div class="header-page col-auto">
+                            <div><a href="reports.html">Отчетность</a></div>
+                        </div>
+                        <div class="header-page col-auto">
+                            <div><a href="kurator_certificates.html">Справки</a></div>
+                        </div>
+                        <div class="header-page col-auto">
+                            <div><a href="view_news.html">Объявления</a></div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="header-acoount d-flex align-items-center">
+                                <a href="dashboard.html">Личный кабинет</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Основной контент -->
+        <main class="main">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">Заказы справок</h5>
+                    <p class="card-text">Ниже представлен список заказов студентов на справки. Вы можете прикрепить
+                        соответствующую справку для каждого студента.</p>
+
+                    <!-- Список заказов студентов -->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Студент</th>
+                                <th>Тип справки</th>
+                                <th>Дата заказа</th>
+                                <th>Комментарий</th>
+                                <th>Прикрепить справку</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Пример одного заказа -->
+                            <tr>
+                                <td>Иванов Иван Иванович</td>
+                                <td>Справка о текущем обучении</td>
+                                <td>03.12.2024</td>
+                                <td>Прошу предоставить справку для подачи в консульство.</td>
+                                <td>
+                                    <form action="/attach_reference/1" method="POST" enctype="multipart/form-data">
+                                        <input type="file" name="reference_file" class="form-control mb-2" required>
+                                        <button type="submit" class="btn btn-success">Прикрепить</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <!-- Другие заказы можно добавить аналогично -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-bottom py-2 text-center">
+                <p class="mb-0">&copy; 2024 Академия Транспортных технологий</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

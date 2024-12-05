@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление группами - Академия Транспортных Технологий</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/user.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="wrapper">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-top py-3">
+                <div class="container-fluid">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-auto"><a href="organizer_dashboard.html">Главная</a></div>
+                        <div class="col-auto"><a href="groups.html">Группы</a></div>
+                        <div class="col-auto"><a href="reports.html">Отчетность</a></div>
+                        <div class="col-auto"><a href="certificates.html">Справки</a></div>
+                        <div class="col-auto"><a href="announcements.html">Объявления</a></div>
+                        <div class="col-auto"><a href="dashboard.html">Личный кабинет</a></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main content -->
+        <main class="main">
+            <div class="container">
+                <!-- Ведомость посещаемости группы -->
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Ведомость посещаемости - Декабрь 2024</h2>
+                        <!-- Таблица посещаемости -->
+                        <div class="table-container">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Студент</th>
+                                        <th>1 Декабря</th>
+                                        <th>2 Декабря</th>
+                                        <th>3 Декабря</th>
+                                        <th>4 Декабря</th>
+                                        <th>5 Декабря</th>
+                                        <th>6 Декабря</th>
+                                        <th>7 Декабря</th>
+                                        <th>8 Декабря</th>
+                                        <th>9 Декабря</th>
+                                        <th>10 Декабря</th>
+                                        <th>Итого пропущено (часы)</th>
+                                        <th>Отработка (часы)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Пример строк для студентов -->
+                                    <tr>
+                                        <td>Иванов И.И.</td>
+                                        <td class="absent">2</td>
+                                        <td class="absent">2</td>
+                                        <td class="present">0</td>
+                                        <td class="absent">2</td>
+                                        <td class="present">0</td>
+                                        <td class="absent">2</td>
+                                        <td class="present">0</td>
+                                        <td class="absent">2</td>
+                                        <td class="present">0</td>
+                                        <td class="present">0</td>
+                                        <td>10</td> <!-- Итого пропущено -->
+                                        <td>4</td> <!-- Отработка -->
+                                    </tr>
+                                    <tr>
+                                        <td>Петров П.П.</td>
+                                        <td class="present">0</td>
+                                        <td class="present">0</td>
+                                        <td class="absent">2</td>
+                                        <td class="absent">2</td>
+                                        <td class="present">0</td>
+                                        <td class="absent">2</td>
+                                        <td class="present">0</td>
+                                        <td class="present">0</td>
+                                        <td class="absent">2</td>
+                                        <td class="present">0</td>
+                                        <td>10</td> <!-- Итого пропущено -->
+                                        <td>6</td> <!-- Отработка -->
+                                    </tr>
+                                    <!-- Пример для других студентов -->
+                                    <tr>
+                                        <td>Сидоров С.С.</td>
+                                        <td class="present">0</td>
+                                        <td class="present">0</td>
+                                        <td class="present">0</td>
+                                        <td class="present">0</td>
+                                        <td class="present">0</td>
+                                        <td class="present">0</td>
+                                        <td class="present">0</td>
+                                        <td class="present">0</td>
+                                        <td class="present">0</td>
+                                        <td class="present">0</td>
+                                        <td>0</td> <!-- Итого пропущено -->
+                                        <td>0</td> <!-- Отработка -->
+                                    </tr>
+                                    <tr>
+                                        <td>Кузнецова А.А.</td>
+                                        <td class="absent">2</td>
+                                        <td class="absent">2</td>
+                                        <td class="present">0</td>
+                                        <td class="absent">2</td>
+                                        <td class="present">0</td>
+                                        <td class="present">0</td>
+                                        <td class="present">0</td>
+                                        <td class="absent">2</td>
+                                        <td class="present">0</td>
+                                        <td class="present">0</td>
+                                        <td>8</td> <!-- Итого пропущено -->
+                                        <td>2</td> <!-- Отработка -->
+                                    </tr>
+                                    <!-- Добавьте другие строки по аналогии -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-bottom py-2 text-center">
+                <p class="mb-0">&copy; 2024 Академия Транспортных технологий</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

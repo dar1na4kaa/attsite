@@ -21,19 +21,16 @@
                 <div class="container-fluid">
                     <div class="row justify-content-between align-items-center">
                         <div class="header-page col-auto">
-                            <div><a href="kurator_dashboard.html">Главная</a></div>
+                            <div><a href="department_dashboard.html">Главная</a></div>
                         </div>
                         <div class="header-page col-auto">
-                            <div><a href="groups.html">Группы</a></div>
+                            <div><a href="department_groups.html">Группы</a></div>
                         </div>
                         <div class="header-page col-auto">
-                            <div><a href="reports.html">Отчетность</a></div>
+                            <div><a href="department_curriculum.html">Учебный план</a></div>
                         </div>
                         <div class="header-page col-auto">
-                            <div><a href="kurator_certificates.html">Справки</a></div>
-                        </div>
-                        <div class="header-page col-auto">
-                            <div><a href="view_news.html">Объявления</a></div>
+                            <div><a href="news.html">Объявления</a></div>
                         </div>
                         <div class="col-auto">
                             <div class="header-acoount d-flex align-items-center">
@@ -48,17 +45,19 @@
         <!-- Main Content -->
         <main class="main py-4">
             <div class="container">
-                <!-- Информация об отделении -->
-                <div class="info-section mb-5 text-center">
-                    <h2 class="title">Отделение: ДЭМ</h2>
-                    <p>Заведующий отделением: Иванова И.И</p>
-                    <p>Контакты: <a href="mailto:ivanov@example.com">ivanov@example.com</a> | +7 (900) 123-45-67</p>
-                </div>
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Информация о группах</h5>
                         <div class="filters">
                             <div class="row">
+                                <div class="col-md-3">
+                                    <label for="group">Отделение</label>
+                                    <select id="group">
+                                        <option>Все</option>
+                                        <option>ДЭМ</option>
+                                        <option>КТ</option>
+                                    </select>
+                                </div>
                                 <div class="col-md-3">
                                     <label for="group">Группа</label>
                                     <select id="group">
@@ -77,6 +76,7 @@
                             </div>
                             <div class="card-footer">
                                 <a href="view_group.html" class="bth btn-primary">Посмотреть</a>
+                                <a href="" class="bth btn-primary">Редактировать</a>
                             </div>
                         </div>
                         <div class="card user-card">
@@ -86,6 +86,7 @@
                             </div>
                             <div class="card-footer">
                                 <a href="view_group.html" class="bth btn-primary">Посмотреть</a>
+                                <a href="" class="bth btn-primary">Редактировать</a>
                             </div>
                         </div>
                         <div class="card user-card">
@@ -95,6 +96,7 @@
                             </div>
                             <div class="card-footer">
                                 <a href="view_group.html" class="bth btn-primary">Посмотреть</a>
+                                <a href="" class="bth btn-primary">Редактировать</a>
                             </div>
                         </div>
                         <div class="card user-card">
@@ -104,6 +106,7 @@
                             </div>
                             <div class="card-footer">
                                 <a href="view_group.html" class="bth btn-primary">Посмотреть</a>
+                                <a href="" class="bth btn-primary">Редактировать</a>
                             </div>
                         </div>
                     </div>

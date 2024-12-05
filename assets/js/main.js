@@ -66,10 +66,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-document.getElementById('confirmDeleteBtn').addEventListener('click', function () {
-    alert('Пользователь удалён!');
-    window.location.href = 'list_users.html'; // Перенаправление на список пользователей
-});
 document.getElementById('addPostForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -193,3 +189,23 @@ function limitMonthSelection() {
 window.onload = function () {
     limitMonthSelection();
 };
+function selectReport(){
+    document.getElementById('show-journal').addEventListener('click', function () {
+        // Получаем выбранный тип ведомости
+        const reportType = document.getElementById('report').value;
+
+        // Скрываем журнал
+        document.getElementById('journal-card').style.display = 'block';
+
+        // Скрываем обе формы сначала
+        document.querySelector('.grades_report').style.display = 'none';
+        document.querySelector('.attendance_report').style.display = 'none';
+
+        // Показываем нужную форму в зависимости от выбранного типа
+        if (reportType === 'grades') {
+            document.querySelector('.grades_report').style.display = 'block';
+        } else if (reportType === 'attendance') {
+            document.querySelector('.attendance_report').style.display = 'block';
+        }
+    });
+}

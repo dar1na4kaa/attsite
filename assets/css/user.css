@@ -126,9 +126,10 @@ body {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
     animation: fadeIn 1s ease-out;
     width: 100%;
+    padding: 20px; /* Отступы внутри карточки */
+    margin: 20px 30px; /* Отступы сверху и снизу */
 }
 .card-body {
     padding: 30px;
@@ -650,6 +651,29 @@ select option:hover {
         opacity: 1;
     }
 }
+/* Стили для контейнера таблицы */
+.table-container {
+    overflow-x: auto; /* Горизонтальная прокрутка */
+    max-width: 100%; /* Ограничиваем максимальную ширину */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+/* Стили для таблицы */
+.table {
+    width: auto; /* Не растягиваем таблицу на всю ширину */
+    border-collapse: collapse;
+    min-width: 700px; /* Минимальная ширина таблицы, чтобы она не сжималась слишком сильно */
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.table th {
+    background-color: #f8f8f8;
+}
 /* Анимации */
 @keyframes fadeIn {
     0% {
@@ -730,5 +754,20 @@ select option:hover {
     }
     .schedule-card-body {
         padding: 15px;
+    }
+    .users-list table {
+        width: 100%;
+        table-layout: auto;
+    }
+    .users-list table th,
+    .users-list table td {
+        padding: 8px;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .action-buttons button {
+        font-size: 12px;
+        padding: 5px 10px;
     }
 }
